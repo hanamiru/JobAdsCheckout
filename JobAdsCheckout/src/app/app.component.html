@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+	<meta charset="utf-8" />
+</head>
+<body>
+    <form #checkoutForm>
+        <label>Customer Name:</label> <br />
+        <input [(ngModel)]="customerName" type="text" name="customerName" required />
+        <p>{{customerName.length}}</p>
+        <br />
+
+        <div *ngIf="customerName.length != 0">
+            <label>Add item to cart:</label> <br />
+            <select [(ngModel)]="selectedItem" name="selectedItem">
+                <option *ngFor="let item of items" [ngValue]="item">{{item}}</option>
+            </select>
+            <br />
+            <input type="button" value="Add" (click)="addToCart()" />
+            <br />
+            <ul id="cartList">
+                <li *ngFor="let item of cart">
+                    {{item}}
+                </li>
+            </ul>
+        </div>
+    </form>
+</body>
+</html>
