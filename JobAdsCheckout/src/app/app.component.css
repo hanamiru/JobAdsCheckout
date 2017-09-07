@@ -1,2 +1,10 @@
 ﻿body {
+    height:100%;
+}
+
+.page {
+    width:75%;
+    left: 0px;
+    right: 0px;
+    background-color: #f1b5b5;
 }

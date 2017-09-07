@@ -1,5 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { Product } from './product.model';
+import { Privilege } from './privilege.model';
+import { CurrencyPipe } from '@angular/common';
 
 @Component({
   selector: 'my-app',
@@ -7,14 +10,4 @@ import { FormsModule } from '@angular/forms';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent  {
-    name = 'Angular';
-    customerName: string = "";
-    items: string[] = ["Classic", "Standard", "Premium"];
-    cart: string[] = [];
-    selectedItem: string;
-
-    addToCart(): void {
-        //add selected item to cart List
-        this.cart.push(this.selectedItem);
-    }
 }

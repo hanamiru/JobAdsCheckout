@@ -1,0 +1,34 @@
+﻿<div>        
+    <div *ngIf="entitledPrivilege">
+        <label>Special Offers!</label>
+        <ul class="list-group">
+            <li class="list" *ngFor="let offer of entitledPrivilege.privilegeDescrip">
+                <span>{{entitledPrivilege.privilegeDescrip}}</span>
+            </li>
+        </ul>
+    </div>
+
+    <div>
+        <label>Add item to cart:</label> <br />
+        <select [(ngModel)]="selectedItem" name="selectedItem">
+            <option *ngFor="let product of products" [ngValue]="product">{{product.name}}</option>
+        </select>
+        <input type="button" value="Add" (click)="addToCart()" />
+        <div id="clearCart"*ngIf="cart.length != 0">
+            <input type="button" value="Clear Cart" (click)="clearCart()" />
+        </div>
+
+        <ul class="list-group">
+            <li class="list-group-item" *ngFor="let product of cart">
+                <span>{{product.name}}</span>
+                <span style="float:right">
+                    <a href="javascript:void(0);" id="{{cart.indexOf(product)}}" (click)="removeFromCart($event)">X</a>
+                </span>
+            </li>
+        </ul>
+    </div>
+
+    <label>Total price: </label>
+    <p>{{totalPrice | currency: 'MYR'}}</p>
+</div>
+

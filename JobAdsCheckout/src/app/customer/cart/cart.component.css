@@ -1,0 +1,12 @@
+﻿.component{
+    background-color:#efefef;
+}
+
+.list{
+    list-style:none;
+    color:#4d8293;
+}
+
+#clearCart{
+    text-align:right;
+}

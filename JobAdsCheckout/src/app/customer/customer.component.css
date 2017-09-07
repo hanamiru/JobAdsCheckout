@@ -1,0 +1,25 @@
+﻿.page {
+    width:75%;
+    margin:auto;
+}
+
+.component{
+    padding:10px;
+    background-color:#efefef;
+    border-radius:3px;
+}
+
+.button{
+    padding:5px 20px 5px 20px;
+    border:none;
+    border-radius:3px;
+}
+
+.instructions{
+    color:#8d5454;
+}
+
+#newcart{
+    text-align:right;
+    padding:10px 0px 10px 0px;
+}

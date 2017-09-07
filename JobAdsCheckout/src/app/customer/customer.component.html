@@ -1,0 +1,28 @@
+﻿<div class="page">
+    <div id="newcart">
+        <input class="button btn-success" type="button" value="New Customer" (click)="reset()" />
+    </div>
+    <div class="component" *ngIf="!proceed">
+        <div class="instructions">
+            <p>Step 1: Please enter a customer name.</p>
+        </div>
+        <label>Customer Name:</label> <br />
+        <input [(ngModel)]="customerName" type="text" name="customerName" />
+        <input type="button" value="Continue" (click)="proceedToCart()" />
+        <br />
+    </div>
+
+    <div *ngIf="proceed">
+        <div class="component">
+            <label>Customer Name: </label>
+            <p>{{customerName}}</p>
+        </div>
+        <br />
+        <div class="component">
+            <cart-component [products]="products" [entitledPrivilege]="entitledPrivilege"></cart-component>
+        </div>
+    </div>
+</div>
+    
+
+
