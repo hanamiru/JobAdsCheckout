@@ -10,3 +10,6 @@ Although this project is built on ASP.NET, the checkout system is implemented on
 3. Build project (Ctrl + Shift + B)
 4. After building successfully, run application without debugging (Ctrl + F5)
 
+## Unit Testing
+This project does not contain any test codes.
+A manual unit testing is required/done and a test documentation is provided, containing a list of test cases and expected results.
