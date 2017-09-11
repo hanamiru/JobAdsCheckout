@@ -11,24 +11,13 @@ import { CheckoutService } from '../checkout.service';
     providers: [CheckoutService]
 })
 
-export class CustomerComponent implements OnInit {
+export class CustomerComponent {
     customerName: string = "";
     entitledPrivilege: Privilege;
     proceed: boolean = false;
     errorMessage: string;
 
     constructor(private _checkoutService: CheckoutService) {}
-
-    ngOnInit() {
-    }
-
-    getPrivilege(customerName: string) {
-        this._checkoutService.getPrivilege(customerName.toLocaleLowerCase())
-            .subscribe(privilege => this.entitledPrivilege = privilege,
-                error => this.errorMessage = error,
-            () => {this.proceed = true; }
-            );
-    }
 
     proceedToCart(): void {
         //check customer's name and eligibility for privileges
@@ -37,6 +26,15 @@ export class CustomerComponent implements OnInit {
         } else {
             this.getPrivilege(this.customerName);
         }  
+    }
+
+    //retrieves any entitled privilege, given the customer's name
+    getPrivilege(customerName: string) {
+        this._checkoutService.getPrivilege(customerName.toLocaleLowerCase())
+            .subscribe(privilege => this.entitledPrivilege = privilege,
+            error => this.errorMessage = error,
+            () => { this.proceed = true; } //proceed to cart
+            );
     }
 
     reset(): void {

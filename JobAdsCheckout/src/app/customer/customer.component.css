@@ -25,10 +25,10 @@
     padding:10px 0px 10px 0px;
 }
 
-/*.clearfix:after { 
+.clearfix:after { 
    content: "."; 
    visibility: hidden; 
    display: block; 
    height: 0; 
    clear: both;
-}*/
+}

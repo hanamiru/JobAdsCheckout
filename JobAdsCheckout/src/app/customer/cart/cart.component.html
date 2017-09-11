@@ -41,7 +41,7 @@
     </ul>
 </div>
 
-<div class="section checkout text-center">
+<div *ngIf="shoppingCart.length != 0" class="section checkout text-center">
     <strong>Total price: </strong>
     <p>{{(totalPrice - discountPrice) | currency: 'USD'}}</p>
     <input type="button" value="Checkout" (click)="checkout()" class="button btn-primary"/>

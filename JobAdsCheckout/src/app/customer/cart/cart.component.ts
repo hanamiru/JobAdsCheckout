@@ -120,12 +120,13 @@ export class CartComponent implements OnInit {
     }
 
     checkout(data: any) {
-        var theJSON = JSON.stringify(data);
-        var uri = "data:application/json;charset=UTF-8," + encodeURIComponent(theJSON);
-        var a = document.createElement('a');
-        a.href = uri;
-        a.innerHTML = "Checkout Data";
-        alert("Checkout success! " + a);
+        alert("Successfully checked out!");
+        //var theJSON = JSON.stringify(data);
+        //var uri = "data:application/json;charset=UTF-8," + encodeURIComponent(theJSON);
+        //var a = document.createElement('a');
+        //a.href = uri;
+        //a.innerHTML = "Checkout Data";
+        //alert("Checkout success! " + a);
     }
 
     clearCart(): void {
