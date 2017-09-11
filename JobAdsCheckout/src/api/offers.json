@@ -1,0 +1,44 @@
+﻿[
+  {
+    "offerId": "offer1",
+    "description": "3 for 2 deal on Classic Ads",
+    "offerType":  "typeA",
+    "promoProduct": "classic",
+    "parameters": [ 3, 2 ]
+  },
+  {
+    "offerId": "offer2",
+    "description": "$299.99 for each Standout Ads",
+    "offerType":  "typeB",
+    "promoProduct": "standout",
+    "parameters": [ 299.99 ]
+  },
+  {
+    "offerId": "offer3",
+    "description": "$379.99 for each Premium Ads when 3 or more Premium Ads are purchased",
+    "offerType": "typeC",
+    "promoProduct": "premium",
+    "parameters": [ 4, 379.99 ]
+  },
+  {
+    "offerId": "offer4",
+    "description": "5 for 4 deal on Classic Ads",
+    "offerType": "typeA",
+    "promoProduct": "classic",
+    "parameters": [ 5, 4 ]
+  },
+  {
+    "offerId": "offer5",
+    "description": "$309.99 for each Standout Ads",
+    "offerType": "typeB",
+    "promoProduct": "standout",
+    "parameters": [ 309.99 ]
+  },
+  {
+    "offerId": "offer6",
+    "description": "$389.99 for each Premium Ads when 3 or more Premium Ads are purchased",
+    "offerType": "typeC",
+    "promoProduct": "premium",
+    "parameters": [ 3, 389.99 ]
+  }
+]

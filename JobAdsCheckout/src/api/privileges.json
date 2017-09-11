@@ -1,0 +1,18 @@
+﻿[
+  {
+    "customer": "unilever",
+    "offers": [ "offer1" ]
+  },
+  {
+    "customer": "apple",
+    "offers": [ "offer2" ]
+  },
+  {
+    "customer": "nike",
+    "offers": [ "offer3" ]
+  },
+  {
+    "customer": "ford",
+    "offers": [ "offer4", "offer5", "offer6"]
+  }
+]

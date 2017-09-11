@@ -1,0 +1,17 @@
+﻿[
+  {
+    "productId": "classic",
+    "productName": "Classic Ad",
+    "price": 269.99
+  },
+  {
+    "productId": "standout",
+    "productName": "Standout Ad",
+    "price": 322.99
+  },
+  {
+    "productId": "premium",
+    "productName": "Premium Ad",
+    "price": 394.99
+  }
+]

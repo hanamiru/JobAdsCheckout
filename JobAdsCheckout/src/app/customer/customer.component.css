@@ -5,8 +5,9 @@
 
 .component{
     padding:10px;
-    background-color:#efefef;
+    background-color:#e5f1fc;
     border-radius:3px;
+    margin-bottom: 10px;
 }
 
 .button{
@@ -15,11 +16,19 @@
     border-radius:3px;
 }
 
-.instructions{
-    color:#8d5454;
+.form-control{
+    margin:auto;
 }
 
 #newcart{
     text-align:right;
     padding:10px 0px 10px 0px;
 }
+
+/*.clearfix:after { 
+   content: "."; 
+   visibility: hidden; 
+   display: block; 
+   height: 0; 
+   clear: both;
+}*/

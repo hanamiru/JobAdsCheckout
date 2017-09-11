@@ -1,12 +1,59 @@
-﻿.component{
-    background-color:#efefef;
+﻿.section{
+    padding:10px;
+    background-color:#ffffff;
+    border-radius:3px;
+    margin:0px;
+    margin-bottom: 10px;
 }
 
-.list{
+.specialOffers{
     list-style:none;
-    color:#4d8293;
+    color:#337ab7;
+}
+
+.shopping{
+    width:35%;
+    display:inline-block;
+    height:100%;
+}
+
+.cart{
+    width:64%;
+    display:inline-block;
+}
+
+.checkout{
+    clear:both;
+}
+
+.form-control{
+    margin:auto;
+}
+
+.button{
+    padding:5px 20px 5px 20px;
+    border:none;
+    border-radius:3px;
+}
+
+.cart h3{
+    color:#a7a7a7;
 }
 
 #clearCart{
     text-align:right;
 }
+
+.float-left{
+    float:left;
+}
+
+.float-right {
+    float:right;
+}
+
+.max-width{
+    width:100%;
+}
+
+

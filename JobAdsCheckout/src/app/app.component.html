@@ -1,41 +1,4 @@
-﻿<!DOCTYPE html>
-<html>
-<head>
-    <title></title>
-	<meta charset="utf-8" />
-</head>
-<body>
-    <div class="text-center">
-        <customer-component></customer-component>
-    </div>
-    
-    <!--<form #checkoutForm>
-        <div>
-            <input type="button" value="New Cart" (click)="resetCart(checkoutForm)" />
-        </div> <br />
-        <customer-component [privileges]="privileges"></customer-component>
-        <br />
+﻿<div class="row">
+    <customer-component></customer-component>
+</div>
 
-        <div *ngIf="customerName.length != 0">
-            <div><p>{{displayPrivilege}}</p></div>
-            <label>Add item to cart:</label> <br />
-            <select [(ngModel)]="selectedItem" name="selectedItem">
-                <option *ngFor="let product of products" [ngValue]="product">{{product.name}}</option>
-            </select>
-            <br />
-            <input type="button" value="Add" (click)="addToCart()" />
-            <br />
-            <ul id="cartList">
-                <li *ngFor="let product of cart">
-                    <span>{{product.name}}</span>
-                    <a href="javascript:void(0);" id="{{cart.indexOf(product)}}" (click)="removeFromCart($event)">X</a>
-                </li>
-            </ul>
-            <br />
-            <label>Total price: </label>
-            <p>{{totalPrice | currency: 'MYR'}}</p>
-            
-        </div>
-    </form>-->
-</body>
-</html>

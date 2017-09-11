@@ -1,34 +1,51 @@
-﻿<div>        
-    <div *ngIf="entitledPrivilege">
-        <label>Special Offers!</label>
-        <ul class="list-group">
-            <li class="list" *ngFor="let offer of entitledPrivilege.privilegeDescrip">
-                <span>{{entitledPrivilege.privilegeDescrip}}</span>
-            </li>
-        </ul>
-    </div>
-
-    <div>
-        <label>Add item to cart:</label> <br />
-        <select [(ngModel)]="selectedItem" name="selectedItem">
-            <option *ngFor="let product of products" [ngValue]="product">{{product.name}}</option>
-        </select>
-        <input type="button" value="Add" (click)="addToCart()" />
-        <div id="clearCart"*ngIf="cart.length != 0">
-            <input type="button" value="Clear Cart" (click)="clearCart()" />
-        </div>
-
-        <ul class="list-group">
-            <li class="list-group-item" *ngFor="let product of cart">
-                <span>{{product.name}}</span>
-                <span style="float:right">
-                    <a href="javascript:void(0);" id="{{cart.indexOf(product)}}" (click)="removeFromCart($event)">X</a>
-                </span>
-            </li>
-        </ul>
-    </div>
-
-    <label>Total price: </label>
-    <p>{{totalPrice | currency: 'MYR'}}</p>
+﻿     
+<div *ngIf="entitledPrivilege" class="section specialOffers text-center">
+    <strong>Special Offers!</strong>
+    <ul class="list-group">
+        <li class="specialOffers" *ngFor="let offer of offers">
+            <span>> {{offer.description}}</span>
+        </li>
+    </ul>
 </div>
+
+<div class="form-group section shopping float-left">
+    <label for="selectedProduct">Product: </label> 
+    <select [(ngModel)]="selectedProduct" name="selectedProduct" class="form-control">
+        <option value="" selected hidden>[Select a product...]</option>
+        <option *ngFor="let product of products" [ngValue]="product">{{product.productName}} ({{product.price | currency: 'USD'}})</option>
+    </select>
+    <br />
+    <label for="selectedAmount">Quantity: </label>
+    <select [(ngModel)]="selectedAmount" name="selectedAmount" class="form-control">
+        <option *ngFor="let number of quantityList" [ngValue]="number">{{number}}</option>
+    </select>
+    <br />
+    <input type="button" value="Add" (click)="addToCart()" class="button btn-primary max-width form-control"/>
+</div>
+
+<div class="section cart float-right">
+    <h3 *ngIf="shoppingCart.length == 0" class="text-center">[Empty Cart]</h3>
+    <div id="clearCart" *ngIf="shoppingCart.length != 0">
+        <input type="button" value="Clear Cart" (click)="clearCart()" class="button btn"/>
+    </div>
+    <ul class="list-group">
+        <li *ngFor="let item of shoppingCart" class="list-group-item">
+            <span>{{item.product.productName}}</span>
+            <em>x{{item.quantity}}</em>
+            
+            <span class="float-right">
+                {{item.subtotal | currency: 'USD'}}
+                <a href="javascript:void(0);" id="{{shoppingCart.indexOf(item)}}" title="Remove Product" (click)="removeFromCart($event)">X</a>
+            </span>
+        </li>
+    </ul>
+</div>
+
+<div class="section checkout text-center">
+    <strong>Total price: </strong>
+    <p>{{(totalPrice - discountPrice) | currency: 'USD'}}</p>
+    <input type="button" value="Checkout" (click)="checkout()" class="button btn-primary"/>
+</div>
+
+
 

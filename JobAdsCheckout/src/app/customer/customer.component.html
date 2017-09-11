@@ -1,27 +1,25 @@
-﻿<div class="page">
+﻿<div class="col-md-10 col-md-offset-1">
     <div id="newcart">
-        <input class="button btn-success" type="button" value="New Customer" (click)="reset()" />
+        <input type="button" value="New Customer" (click)="reset()" class="button btn-success"/>
     </div>
-    <div class="component" *ngIf="!proceed">
-        <div class="instructions">
-            <p>Step 1: Please enter a customer name.</p>
-        </div>
-        <label>Customer Name:</label> <br />
-        <input [(ngModel)]="customerName" type="text" name="customerName" />
-        <input type="button" value="Continue" (click)="proceedToCart()" />
+    <div *ngIf="!proceed" class="component text-center">
+        <input [(ngModel)]="customerName" type="text" name="customerName" placeholder="Enter a customer name..." class="form-control text-center"/>
+        <br />
+        <input type="button" value="Continue" (click)="proceedToCart()" class="button btn-primary"/>
         <br />
     </div>
 
     <div *ngIf="proceed">
-        <div class="component">
-            <label>Customer Name: </label>
+        <div class="component text-center">
+            <strong>Customer Name: </strong>
             <p>{{customerName}}</p>
         </div>
-        <br />
         <div class="component">
-            <cart-component [products]="products" [entitledPrivilege]="entitledPrivilege"></cart-component>
+            <cart-component [entitledPrivilege]="entitledPrivilege"></cart-component>
         </div>
     </div>
+    <!-- For debugging-->
+    <div>{{errorMessage}}</div>
 </div>
     
 

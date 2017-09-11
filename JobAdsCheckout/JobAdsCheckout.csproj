@@ -152,7 +152,6 @@
     <Content Include="src\app\customer\customer.component.css" />
     <Content Include="src\app\customer\customer.component.html" />
     <Content Include="src\favicon.ico" />
-    <Content Include="src\index.html" />
     <Content Include="src\main.js" />
     <Content Include="src\styles.css" />
     <Content Include="src\systemjs-angular-loader.js" />
@@ -163,11 +162,11 @@
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\DefaultApiController.cs" />
     <Compile Include="Controllers\DefaultController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\Product.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -188,6 +187,9 @@
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="scripts\jquery-1.10.2.min.map" />
+    <Content Include="src\api\products.json" />
+    <Content Include="src\api\offers.json" />
+    <Content Include="src\api\privileges.json" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -197,13 +199,19 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Models\" />
+    <Folder Include="Views\DefaultApi\" />
   </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="src\app\app.component.ts" />
     <TypeScriptCompile Include="src\app\app.module.ts" />
+    <TypeScriptCompile Include="src\app\cart.model.ts" />
+    <TypeScriptCompile Include="src\app\checkout.service.ts" />
     <TypeScriptCompile Include="src\app\customer\cart\cart.component.ts" />
     <TypeScriptCompile Include="src\app\customer\customer.component.ts" />
+    <TypeScriptCompile Include="src\app\offer.model.ts" />
     <TypeScriptCompile Include="src\app\privilege.model.ts" />
+    <TypeScriptCompile Include="src\app\privileges.service.ts" />
     <TypeScriptCompile Include="src\app\product.model.ts" />
     <TypeScriptCompile Include="src\main.ts" />
   </ItemGroup>

@@ -1,8 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { CurrencyPipe } from '@angular/common';
+
 import { Product } from './product.model';
 import { Privilege } from './privilege.model';
-import { CurrencyPipe } from '@angular/common';
+
 
 @Component({
   selector: 'my-app',
