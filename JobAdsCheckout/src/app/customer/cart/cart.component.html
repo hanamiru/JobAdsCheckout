@@ -17,6 +17,7 @@
     <br />
     <label for="selectedAmount">Quantity: </label>
     <select [(ngModel)]="selectedAmount" name="selectedAmount" class="form-control">
+        <option value="-1" selected hidden>[Select a quantity...]</option>
         <option *ngFor="let number of quantityList" [ngValue]="number">{{number}}</option>
     </select>
     <br />
