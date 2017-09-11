@@ -2,7 +2,7 @@
 
 ## Description
 This is a front-end test implementation of a checkout system.
-Although this project is built on ASP.NET, the checkout system is implemented only on the front-end using Angular2 and Typescript. No server-side is involved, data is hardcoded in json files.
+Although this project is built on ASP.NET MVC, the checkout system is implemented only on the front-end using Angular2 and Typescript. No server-side is involved. Data is hardcoded in json files under /src/api.
 
 ## Run application
 1. Clone repository or download zip file
